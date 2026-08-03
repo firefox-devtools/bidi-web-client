@@ -2,7 +2,7 @@
 
 A web-based testing client for WebDriver BiDi protocol commands.
 
-See live at https://juliandescottes.github.io/bidi-web-client/web/
+See live at https://firefox-devtools.github.io/bidi-web-client/web/
 
 ## Features
 
@@ -27,7 +27,7 @@ firefox --remote-debugging-port --remote-allow-origins=http://localhost:8080
 Or for the live version:
 
 ```bash
-firefox --remote-debugging-port --remote-allow-origins=https://juliandescottes.github.io
+firefox --remote-debugging-port --remote-allow-origins=https://firefox-devtools.github.io
 ```
 
 ### Connecting
