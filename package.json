@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juliandescottes/bidi-web-client.git"
+    "url": "git+https://github.com/firefox-devtools/bidi-web-client.git"
   },
   "author": "jdescottes@mozilla.com",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/juliandescottes/bidi-web-client/issues"
+    "url": "https://github.com/firefox-devtools/bidi-web-client/issues"
   },
-  "homepage": "https://github.com/juliandescottes/bidi-web-client#readme",
+  "homepage": "https://github.com/firefox-devtools/bidi-web-client#readme",
   "devDependencies": {
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
