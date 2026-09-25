@@ -128,6 +128,10 @@ export const COMMAND_MODULES = {
           "clip": {
             "type": "browsingContext.ClipRectangle",
             "required": false
+          },
+          "imageSize": {
+            "type": "browsingContext.ImageSize",
+            "required": false
           }
         },
         "placeholder": "{\"context\":\"\"}"
@@ -308,6 +312,25 @@ export const COMMAND_MODULES = {
         },
         "placeholder": "{\"context\":\"\"}"
       },
+      "browsingContext.setBypassCSP": {
+        "method": "browsingContext.setBypassCSP",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-browsingContext-setBypassCSP",
+        "params": {
+          "bypass": {
+            "type": "true | null",
+            "required": true
+          },
+          "contexts": {
+            "type": "[+browsingContext.BrowsingContext]",
+            "required": false
+          },
+          "userContexts": {
+            "type": "[+browser.UserContext]",
+            "required": false
+          }
+        },
+        "placeholder": "{\"bypass\":\"\"}"
+      },
       "browsingContext.setViewport": {
         "method": "browsingContext.setViewport",
         "specUrl": "https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport",
@@ -330,6 +353,44 @@ export const COMMAND_MODULES = {
           }
         },
         "placeholder": "{}"
+      },
+      "browsingContext.startScreencast": {
+        "method": "browsingContext.startScreencast",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-browsingContext-startScreencast",
+        "params": {
+          "context": {
+            "type": "browsingContext.BrowsingContext",
+            "required": true
+          },
+          "destinationFolder": {
+            "type": "text",
+            "required": false
+          },
+          "mimeType": {
+            "type": "text",
+            "required": false
+          },
+          "video": {
+            "type": "browsingContext.MediaTrackConstraints",
+            "required": false
+          },
+          "audio": {
+            "type": "bool .default false",
+            "required": false
+          }
+        },
+        "placeholder": "{\"context\":\"\"}"
+      },
+      "browsingContext.stopScreencast": {
+        "method": "browsingContext.stopScreencast",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-browsingContext-stopScreencast",
+        "params": {
+          "screencast": {
+            "type": "browsingContext.Screencast",
+            "required": true
+          }
+        },
+        "placeholder": "{\"screencast\":\"\"}"
       },
       "browsingContext.traverseHistory": {
         "method": "browsingContext.traverseHistory",
@@ -408,6 +469,25 @@ export const COMMAND_MODULES = {
         },
         "placeholder": "{\"locale\":\"\"}"
       },
+      "emulation.setMediaFeaturesOverride": {
+        "method": "emulation.setMediaFeaturesOverride",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setMediaFeaturesOverride",
+        "params": {
+          "features": {
+            "type": "emulation.MediaFeatures | null",
+            "required": true
+          },
+          "contexts": {
+            "type": "[+browsingContext.BrowsingContext]",
+            "required": false
+          },
+          "userContexts": {
+            "type": "[+browser.UserContext]",
+            "required": false
+          }
+        },
+        "placeholder": "{\"features\":{}}"
+      },
       "emulation.setNetworkConditions": {
         "method": "emulation.setNetworkConditions",
         "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setNetworkConditions",
@@ -484,6 +564,44 @@ export const COMMAND_MODULES = {
         },
         "placeholder": "{\"enabled\":\"\"}"
       },
+      "emulation.setScrollbarTypeOverride": {
+        "method": "emulation.setScrollbarTypeOverride",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setScrollbarTypeOverride",
+        "params": {
+          "scrollbarType": {
+            "type": "\"classic\" | \"overlay\" | null",
+            "required": true
+          },
+          "contexts": {
+            "type": "[+browsingContext.BrowsingContext]",
+            "required": false
+          },
+          "userContexts": {
+            "type": "[+browser.UserContext]",
+            "required": false
+          }
+        },
+        "placeholder": "{\"scrollbarType\":\"\"}"
+      },
+      "emulation.setTextLayoutModeOverride": {
+        "method": "emulation.setTextLayoutModeOverride",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setTextLayoutModeOverride",
+        "params": {
+          "textLayoutMode": {
+            "type": "emulation.TextLayoutMode | null",
+            "required": true
+          },
+          "contexts": {
+            "type": "[+browsingContext.BrowsingContext]",
+            "required": false
+          },
+          "userContexts": {
+            "type": "[+browser.UserContext]",
+            "required": false
+          }
+        },
+        "placeholder": "{\"textLayoutMode\":{}}"
+      },
       "emulation.setTimezoneOverride": {
         "method": "emulation.setTimezoneOverride",
         "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setTimezoneOverride",
@@ -540,6 +658,25 @@ export const COMMAND_MODULES = {
           }
         },
         "placeholder": "{\"userAgent\":\"\"}"
+      },
+      "emulation.setViewportMetaOverride": {
+        "method": "emulation.setViewportMetaOverride",
+        "specUrl": "https://w3c.github.io/webdriver-bidi/#command-emulation-setViewportMetaOverride",
+        "params": {
+          "viewportMeta": {
+            "type": "true | null",
+            "required": true
+          },
+          "contexts": {
+            "type": "[+browsingContext.BrowsingContext]",
+            "required": false
+          },
+          "userContexts": {
+            "type": "[+browser.UserContext]",
+            "required": false
+          }
+        },
+        "placeholder": "{\"viewportMeta\":\"\"}"
       }
     }
   },
